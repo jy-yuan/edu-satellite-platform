@@ -1,0 +1,12 @@
+.register-form {
+  max-width: 400px;
+  background-color: white;
+  border: 20px solid white;
+  border-radius:10px;
+}
+.register-form-button {
+  width: 100%;
+}
+.law{
+  float: left;
+}

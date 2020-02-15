@@ -133,27 +133,9 @@ class RegistrationForm extends React.Component {
     const { getFieldDecorator } = this.props.form;
 
     const formItemLayout = {
-      // labelCol: {
-      //   xs: { span: 24 },
-      //   sm: { span: 8 },
-      // },
-      // wrapperCol: {
-      //   xs: { span: 24 },
-      //   sm: { span: 16 },
-      // },
       className: "register-form",
     };
     const tailFormItemLayout = {
-      // wrapperCol: {
-      //   xs: {
-      //     span: 24,
-      //     offset: 0,
-      //   },
-      //   sm: {
-      //     span: 16,
-      //     offset: 8,
-      //   },
-      // },
     };
     const prefixSelector = getFieldDecorator('way', {
       initialValue: 'byPhone',
@@ -197,16 +179,6 @@ class RegistrationForm extends React.Component {
             ],
           })(<Input.Password onBlur={this.handleConfirmBlur} placeholder="确认密码（必需）"/>)}
         </Form.Item>
-        {/* <Form.Item>
-          {getFieldDecorator('email', {
-            rules: [
-              {
-                type: 'email',
-                message: '邮箱不合法',
-              },
-            ],
-          })(<Input placeholder="E-mail" />)}
-        </Form.Item> */}
         <Form.Item>
           {getFieldDecorator('phoneOrEmail', {
             rules: [{ required: true, message: '请输入手机号或邮箱' }],
@@ -246,6 +218,5 @@ class RegistrationForm extends React.Component {
 
 const WrappedRegistrationForm = Form.create({ name: 'register' })(RegistrationForm);
 
-// ReactDOM.render(<WrappedRegistrationForm />, mountNode);
 
 export default WrappedRegistrationForm;
